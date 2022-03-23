@@ -20,8 +20,9 @@ pipeline{
         stage('deliver'){
             steps{
                 sh 'npm install netlify-cli'
-                sh 'npx netlify deploy --site $NETLIFY_SITE_ID --$NETLIFY_AUTH_TOKEN --dir build/ --prod'
+                sh 'npx netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir build/ --prod'
             }
         }
     }
 }
+
