@@ -6,6 +6,8 @@ pipeline{
     }
     environment {
         CI = 'true'
+        NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH_TOKEN_H')
+        NETLIFY_SITE_ID = credentials('NETLIFY_SITE_ID_H')
     }
     
     stages {
